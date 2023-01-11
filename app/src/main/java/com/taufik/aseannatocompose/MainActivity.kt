@@ -1,4 +1,4 @@
-package com.taufik.aseancompose
+package com.taufik.aseannatocompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,20 +7,20 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.taufik.aseancompose.ui.AseanApp
-import com.taufik.aseancompose.ui.theme.AseanComposeTheme
+import com.taufik.aseannatocompose.ui.AseanNatoApp
+import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AseanComposeTheme {
+            AseanNatoComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    AseanApp()
+                    AseanNatoApp()
                 }
             }
         }

@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Asean Compose"
+rootProject.name = "ASEAN NATO Compose"
 include ':app'

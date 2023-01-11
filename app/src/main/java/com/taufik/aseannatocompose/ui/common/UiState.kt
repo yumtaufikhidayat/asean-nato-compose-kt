@@ -1,4 +1,4 @@
-package com.taufik.aseancompose.ui.common
+package com.taufik.aseannatocompose.ui.common
 
 sealed class UiState<out T: Any?> {
     object Loading: UiState<Nothing>()

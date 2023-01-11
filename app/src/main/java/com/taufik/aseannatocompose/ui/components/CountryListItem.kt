@@ -1,4 +1,4 @@
-package com.taufik.aseancompose.ui.components
+package com.taufik.aseannatocompose.ui.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -18,16 +18,16 @@ import coil.compose.AsyncImage
 
 @Composable
 fun CountryListItem(
-    countryName: String,
-    countryInternationalName: String,
-    countryFlagUrl: String,
-    countryDescription: String,
-    countryHeadGovernment: String,
-    countryCapital: String,
-    countryIndependenceDay: String,
-    countryLanguage: String,
-    countryCurrency: String,
-    countryLandArea: String,
+    countryName: String = "",
+    countryInternationalName: String = "",
+    countryFlagUrl: String  = "",
+    countryDescription: String  = "",
+    countryHeadGovernment: String  = "",
+    countryCapital: String  = "",
+    countryIndependenceDay: String  = "",
+    countryLanguage: String  = "",
+    countryCurrency: String  = "",
+    countryLandArea: String  = "",
     modifier: Modifier = Modifier
 ) {
     Row(

@@ -1,4 +1,4 @@
-package com.taufik.aseancompose.model
+package com.taufik.aseannatocompose.model
 
 data class Country(
     var countryId: Int = 0,

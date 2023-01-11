@@ -1,9 +1,9 @@
-package com.taufik.aseancompose
+package com.taufik.aseannatocompose
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.taufik.aseancompose.data.CountryRepository
-import com.taufik.aseancompose.ui.CountryViewModel
+import com.taufik.aseannatocompose.data.CountryRepository
+import com.taufik.aseannatocompose.ui.CountryViewModel
 
 class ViewModelFactory(private val repository: CountryRepository) :
     ViewModelProvider.NewInstanceFactory() {

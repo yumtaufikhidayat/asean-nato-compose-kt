@@ -1,4 +1,4 @@
-package com.taufik.aseancompose
+package com.taufik.aseannatocompose
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,10 +1,10 @@
-package com.taufik.aseancompose.ui
+package com.taufik.aseannatocompose.ui
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.taufik.aseancompose.data.CountryRepository
-import com.taufik.aseancompose.model.Country
+import com.taufik.aseannatocompose.data.CountryRepository
+import com.taufik.aseannatocompose.model.Country
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

@@ -1,7 +1,7 @@
-package com.taufik.aseancompose.data
+package com.taufik.aseannatocompose.data
 
-import com.taufik.aseancompose.model.Country
-import com.taufik.aseancompose.model.FakeCountryDataSource
+import com.taufik.aseannatocompose.model.Country
+import com.taufik.aseannatocompose.model.FakeCountryDataSource
 
 class CountryRepository {
     fun getCountries(): List<Country> = FakeCountryDataSource.dummyCountries
