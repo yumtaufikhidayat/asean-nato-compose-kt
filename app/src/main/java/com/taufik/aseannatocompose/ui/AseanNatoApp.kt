@@ -72,7 +72,7 @@ fun AseanNatoApp(
         AnimatedVisibility(
             visible = showButton,
             enter = fadeIn() + slideInVertically(),
-            exit = fadeOut() + slideOutHorizontally(),
+            exit = fadeOut() + slideOutVertically(),
             modifier = Modifier
                 .padding(bottom = 30.dp)
                 .align(Alignment.BottomCenter)
