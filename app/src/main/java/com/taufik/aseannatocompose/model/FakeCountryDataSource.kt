@@ -131,6 +131,151 @@ object FakeCountryDataSource {
             countryLanguage = "Khmer, Prancis, Inggris",
             countryCurrency = "Riel (KHR)",
             countryLandArea = "181.035"
-        )
+        ),
+        Country(
+            countryId = 11,
+            countryName = "Amerika Serikat",
+            countryInternationalName = "United States of America",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/1200px-Flag_of_the_United_States_%28Pantone%29.svg.png",
+            countryDescription = "Amerika Serikat terletak di tengah-tengah benua Amerika Utara, dibatasi oleh Kanada di sebelah utara dan Meksiko di sebelah selatan. Negara Amerika Serikat terbentang dari Samudra Atlantik di pesisir timur hingga Samudra Pasifik di pesisir barat, termasuk kepulauan Hawaii di lautan Pasifik, negara bagian Alaska di ujung utara benua Amerika, dan beberapa teritori lainnya. Negara Amerika, sebuah negara republik konstitusional federal, terdiri dari lima puluh negara bagian dan sebuah distrik federal.",
+            countryHeadGovernment = "Joe Biden (Presiden)",
+            countryCapital = "Washington, D.C.",
+            countryIndependenceDay = "4 Juli",
+            countryLanguage = "Inggris Amerika",
+            countryCurrency = "Dolar Amerika (USD)",
+            countryLandArea = "9.830.000"
+        ),
+        Country(
+            countryId = 12,
+            countryName = "Inggris",
+            countryInternationalName = "England",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/1200px-Flag_of_England.svg.png",
+            countryDescription = "Inggris (bahasa Inggris: England) adalah sebuah negara konstituen yang merupakan bagian dari Britania Raya.[6][7][8] Negara ini berbatasan dengan Skotlandia di sebelah utara dan Wales di sebelah barat, Laut Irlandia di barat laut, Laut Keltik di barat daya, serta Laut Utara di sebelah timur dan Selat Inggris, yang memisahkannya dari benua Eropa, di sebelah selatan. Sebagian besar wilayah Inggris terdiri dari bagian tengah dan selatan Pulau Britania Raya di Atlantik Utara. Inggris juga mencakup lebih dari 100 pulau kecil seperti Kepulauan Scilly dan Pulau Wight.",
+            countryHeadGovernment = "Charles III (Raja)",
+            countryCapital = "London",
+            countryIndependenceDay = "2 Juli",
+            countryLanguage = "Inggris",
+            countryCurrency = "Poundsterling",
+            countryLandArea = "130.279"
+        ),
+        Country(
+            countryId = 13,
+            countryName = "Prancis",
+            countryInternationalName = "France",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Flag_of_France_%28lighter_variant%29.svg/250px-Flag_of_France_%28lighter_variant%29.svg.png",
+            countryDescription = "Prancis adalah sebuah negara yang teritori metropolitannya terletak di Eropa Barat dan juga memiliki berbagai pulau dan teritori seberang laut yang terletak di benua lain.[7] Negara ini berbatasan dengan Belgia, Luksemburg, Jerman, Swiss, Italia, Monako, Andorra, dan Spanyol. Karena memiliki departemen seberang laut, Prancis juga berbagi perbatasan tanah dengan Brasil dan Suriname (berbatasan dengan Guyana Prancis), dan Sint Maarten (berbatasan dengan Saint-Martin). Prancis juga terhubung dengan Britania Raya oleh Terowongan Channel, yang berada di bawah Selat Inggris.",
+            countryHeadGovernment = "Élisabeth Borne (Perdana Menteri)",
+            countryCapital = "Paris",
+            countryIndependenceDay = "14 Juli",
+            countryLanguage = "Prancis",
+            countryCurrency = "Euro",
+            countryLandArea = "643.801"
+        ),
+        Country(
+            countryId = 14,
+            countryName = "Belgia",
+            countryInternationalName = "Kingdom of Belgium",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/255px-Flag_of_Belgium_%28civil%29.svg.png",
+            countryDescription = "Belgia sebuah negara di Eropa bagian barat. Di sebelah utara, Belgia berbatasan dengan Belanda, di sebelah timur dengan Jerman, di sebelah selatan dengan Prancis dan Luksemburg, dan di sebelah barat dengan Laut Utara, di seberang Britania Raya. Negara ini memiliki luas mencapai 30.689 kilometer persegi (11.849 sq mi) dan populasi lebih dari 11,5 juta, membuatnya negara ke-22 paling padat di dunia dan ke-6 paling padat di Eropa dengan kepadatan 376 per kilometer persegi (970/sq mi). Ibu kota dan kota terbesar di negara ini adalah Brussel; kota besar lain meliputi Antwerpen, Gent, Brugge, Namur dan Leuven.\n" +
+                    "\n Negara ini adalah sebuah kerajaan konstitusional federal dengan sistem parlementer. Negara ini dibagi menjadi tiga negara bagian: Daerah Flandria di utara, Daerah Walonia di selatan, dan Daerah Ibukota Brussel.",
+            countryHeadGovernment = "Alexander De Croo (Perdana Menteri)",
+            countryCapital = "Brussels",
+            countryIndependenceDay = "21 Juli",
+            countryLanguage = "Belanda, Prancis, Jerman",
+            countryCurrency = "Euro",
+            countryLandArea = "30.689 "
+        ),
+        Country(
+            countryId = 15,
+            countryName = "Belanda",
+            countryInternationalName = "Kingdom of Netherland",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1280px-Flag_of_the_Netherlands.svg.png",
+            countryDescription = "Belanda adalah sebuah negara yang sebagian besar terletak di Benua Eropa. Belanda merupakan bagian dari Kerajaan Belanda, sebuah negara monarki konstitusional yang mencakup seluruh bagian Belanda Eropa serta Belanda Karibia. Belanda terdiri dari dua belas provinsi di Eropa Barat dan tiga pulau teritori di Karibia. Belanda Eropa berbatasan dengan Laut Utara di utara dan barat, Belgia di selatan, dan Jerman di timur, serta berbagi perbatasan maritim dengan Belgia, Jerman, dan Britania Raya. Belanda menganut sistem pemerintahan demokrasi parlementer yang disusun sebagai negara kesatuan. Ibu kota dan kota terbesarnya adalah Amsterdam, sedangkan pusat pemerintahan dan kedudukan monarkinya berada di Den Haag. Belanda sebagai keseluruhan sering kali disebut Holland meskipun istilah tersebut hanya mencakup provinsi Holland Utara dan Holland Selatan.",
+            countryHeadGovernment = "Mark Rutte (Perdana Menteri)",
+            countryCapital = "Amsterdam",
+            countryIndependenceDay = "5 Mei",
+            countryLanguage = "Belanda",
+            countryCurrency = "Euro",
+            countryLandArea = "41.54341.543"
+        ),
+/*        Country(
+            countryId = 16,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),
+        Country(
+            countryId = 17,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),
+        Country(
+            countryId = 18,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),
+        Country(
+            countryId = 19,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),
+        Country(
+            countryId = 20,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),
+        Country(
+            countryId = 21,
+            countryName = "",
+            countryInternationalName = "",
+            countryFlagUrl = "",
+            countryDescription = "",
+            countryHeadGovernment = "",
+            countryCapital = "",
+            countryIndependenceDay = "",
+            countryLanguage = "",
+            countryCurrency = "",
+            countryLandArea = ""
+        ),*/
+
     )
 }
