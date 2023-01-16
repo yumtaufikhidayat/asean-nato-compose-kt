@@ -13,8 +13,8 @@ import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
 fun ToolbarHeader(
-    title: String = "",
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    title: String = ""
 ) {
     Column {
         TopAppBar(
@@ -34,6 +34,6 @@ fun ToolbarHeader(
 @Composable
 fun ToolbarHeaderPreview() {
     AseanNatoComposeTheme {
-        ToolbarHeader("ASEAN-NATO Countries")
+        ToolbarHeader(title = "ASEAN-NATO Countries")
     }
 }
