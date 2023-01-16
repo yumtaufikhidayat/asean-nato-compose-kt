@@ -331,7 +331,212 @@ object FakeCountryDataSource {
             countryCurrency = "Euro (EUR)",
             countryLandArea = "357.386"
         ),
-
-
+        Country(
+            countryId = 26,
+            countryName = "Spanyol",
+            countryInternationalName = "España",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/125px-Bandera_de_Espa%C3%B1a.svg.png",
+            countryDescription = "Spanyol secara resmi dikenal dengan sebutan Kerajaan Spanyol adalah sebuah negara di Eropa barat daya yang bersama Portugal, terdapat di Semenanjung Iberia. Batas darat Spanyol dengan Eropa adalah Pegunungan Pirenia dengan Prancis dan Andorra. Wilayahnya terdiri dari kota Ceuta dan Melilla di Afrika Utara, Kepulauan Canary di Samudra Atlantik, dan berbagai pulau di Laut Tengah.\n" +
+                    "\nWilayah Spanyol juga termasuk Kepulauan Balearic di Mediterania, Kepulauan Canary di Samudera Atlantik lepas pantai Afrika, dan dua kota otonom di Afrika Utara, Ceuta dan Melilla, yang berbatasan Maroko, ditambah Alboran, Kepulauan Chafarinas, Alhucemas, Vélez de la Gomera dan pulau kecil lainnya termasuk Perejil. Selain itu, kota Llívia adalah eksklave Spanyol terletak di dalam wilayah Prancis. Dengan luas 505.992 kilometer persegi (195.365 mil persegi), Spanyol adalah negara terbesar kedua di Eropa Barat dan Uni Eropa dan negara terbesar kelima di Eropa.",
+            countryHeadGovernment = "Pedro Sánchez (Perdana Menteri)",
+            countryCapital = "Madrid",
+            countryIndependenceDay = "12 Oktober",
+            countryLanguage = "Spanyol",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "505.990"
+        ),
+        Country(
+            countryId = 27,
+            countryName = "Ceko",
+            countryInternationalName = "Česká Republika",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/125px-Flag_of_the_Czech_Republic.svg.png",
+            countryDescription = "Republik Ceko atau secara singkat Ceko atau Cekia adalah sebuah negara di Eropa Tengah yang terbentuk setelah bubarnya negara Cekoslowakia. Negara ini berbatasan dengan Jerman di sebelah barat dan utara, dengan Polandia di sebelah utara, dengan Slowakia di sebelah tenggara dan dengan Austria di sebelah selatan.\n" +
+                    "\nDi negara ini terletak Sudetenland di mana dahulu tinggal suku bangsa Jerman, tetapi setelah Perang Dunia II, sebagian besar mereka dideportasi meskipun masih banyak orang Ceko yang menyandang nama Jerman. Kala itu sekitar 3,5 juta jiwa bangsa Jerman diusir.\n" +
+                    "\nDi tanah Sudeten banyak terdapat industri, terutama industri kerajinan kristal dan bir.",
+            countryHeadGovernment = "Petr Fiala (Perdana Menteri)",
+            countryCapital = "Praha",
+            countryIndependenceDay = "28 Oktober",
+            countryLanguage = "Ceska",
+            countryCurrency = "Koruna (CZK)",
+            countryLandArea = "78.866"
+        ),
+        Country(
+            countryId = 28,
+            countryName = "Hungaria",
+            countryInternationalName = "Hongaria",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/125px-Flag_of_Hungary.svg.png",
+            countryDescription = "Hungaria adalah sebuah negara terkurung daratan di Eropa tengah. Negara ini terletak pada Cekungan Karpatia dan berbatasan dengan Austria di sebelah barat, Slowakia di sebelah utara, Ukraina di sebelah timur, Rumania di sebelah tenggara, Kroasia dan Serbia di sebelah selatan, Slovenia di sebelah barat daya. Dalam bahasa setempat, negara ini dikenal sebagai Magyarország yang berarti \"daerah Magyar\". Hungaria membentuk kumpulan Visegrád bersama Polandia, Slowakia dan Republik Ceko. Kota terbesar dan ibu kotanya adalah Budapest. Hungaria juga termasuk anggota NATO, Uni Eropa, Organisasi Kerja sama dan Perkembangan Ekonomi, dan Perjanjian Schengen. Bahasa resminya adalah bahasa Hungaria, yang merupakan bahasa non-Indo-Eropa yang paling banyak dituturkan di Eropa.",
+            countryHeadGovernment = "Viktor Orbán (Perdana Menteri)",
+            countryCapital = "Budapest",
+            countryIndependenceDay = "15 Maret",
+            countryLanguage = "Hungaria",
+            countryCurrency = "Forint (HUF)",
+            countryLandArea = "93.030"
+        ),
+        Country(
+            countryId = 29,
+            countryName = "Polandia",
+            countryInternationalName = "Rzeczpospolita Polska",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/125px-Flag_of_Poland.svg.png",
+            countryDescription = "Polandia adalah sebuah negara republik di Eropa Tengah yang berbatasan langsung dengan Jerman di sebelah barat Perbatasan Oder-Neisse, Ceko, dan Slowakia di sebelah selatan, Rusia (Kaliningrad), Lituania di sebelah timur laut dan Belarus serta Ukraina di sebelah timur. Polandia adalah negara anggota Uni Eropa. Ibu kota Polandia dan kota terbesar adalah Warsawa.\n" +
+                    "\nPolandia adalah negara yang maju dan kuat di kawasan ini. Negara ini memiliki ekonomi terbesar kedelapan dan salah satu yang paling dinamis di Uni Eropa dengan Indeks Pembangunan Manusia yang sangat tinggi.[6] Selain itu, Bursa Efek Polandia di Warsawa adalah salah satu yang terbesar dan paling penting di Eropa Tengah. Polandia mempertahankan ekonomi berpenghasilan tinggi bersama dengan standar hidup yang sangat tinggi, kualitas hidup, keselamatan, pendidikan, dan kebebasan ekonomi.",
+            countryHeadGovernment = "Mateusz Morawiecki (Perdana Menteri)",
+            countryCapital = "Warsaw",
+            countryIndependenceDay = "11 November",
+            countryLanguage = "Polandia",
+            countryCurrency = "Złoty (PLN)",
+            countryLandArea = "312.679"
+        ),
+        Country(
+            countryId = 30,
+            countryName = "Bulgaria",
+            countryInternationalName = "Republika Bŭlgariya",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/125px-Flag_of_Bulgaria.svg.png",
+            countryDescription = "Bulgaria adalah sebuah negara di Eropa Tenggara. Bulgaria berbatasan dengan lima negara: Rumania di utara (sebagian besarnya di sepanjang Sungai Donau), Serbia, dan Republik Makedonia di barat, dan Yunani dan Turki di selatan. Laut Hitam membatasi negara ini di sebelah timur.\n" +
+                    "\nDengan luas wilayah 110.994 km², Bulgaria menjadi negara terluas ke-16 di Eropa. Beberapa kawasan pegunungan membatasi bentang alamnya, yang paling terkenal adalah Pegunungan Balkan dan Pegunungan Rodopi, juga Pegunungan Rila, padanya terdapat puncak tertinggi di kawasan Balkan, yaitu Puncak Musala. Sebaliknya, Dataran Donau di utara dan Dataran Trakia Atas di selatan menjadi titik terendah sekaligus sebagai kawasan tersubur di Bulgaria. Pesisir Laut Hitam sepanjang 378 km meliputi seluruh batas timur negara ini. Pusat pemerintahan sekaligus kota terbesar Bulgaria adalah Sofia.",
+            countryHeadGovernment = "Kiril Petkov (Perdana Menteri)",
+            countryCapital = "Sofia",
+            countryIndependenceDay = "3 Maret",
+            countryLanguage = "Bulgaria",
+            countryCurrency = "Lev Bulgaria (BGN)",
+            countryLandArea = "110.994"
+        ),
+        Country(
+            countryId = 31,
+            countryName = "Estonia",
+            countryInternationalName = "Eesti Vabariik",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/125px-Flag_of_Estonia.svg.png",
+            countryDescription = "Republik Estonia adalah sebuah negara berdaulat di kawasan Baltik di Eropa Utara. Estonia berbatasan dengan Teluk Finlandia di utara, dengan Laut Baltik di barat, dengan Latvia dan Teluk Riga di selatan (343 km), dan Danau Peipus (Peipsi) dan Rusia di timur (338,6 km). Di seberang barat Laut Baltik terletak Swedia, sedangkan di utaranya terdapat Finlandia. Sejak tanggal 21 Desember 2007, Estonia turut meratifikasi Perjanjian Schengen 1985, yakni perjanjian yang dibuat oleh sejumlah negara Eropa untuk menghapuskan pengawasan perbatasan di antara mereka. Wilayah Estonia seluas 45.227 km2 (17.462 sq mi), dan dipengaruhi oleh iklim sedang. Bangsa Estonia tergolong orang Fin Baltik, dan bahasa resminya adalah bahasa Esti yang serumpun dengan bahasa Suomi meskipun hanya mirip beberapa persen.",
+            countryHeadGovernment = "Kaja Kallas (Perdana Menteri)",
+            countryCapital = "Talinn",
+            countryIndependenceDay = "24 Februari",
+            countryLanguage = "Estonia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "45.227"
+        ),
+        Country(
+            countryId = 32,
+            countryName = "Latvia",
+            countryInternationalName = "Latvijas Republika",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/125px-Flag_of_Latvia.svg.png",
+            countryDescription = "Republik Latvia adalah sebuah negara di kawasan Baltik, Eropa Utara. Latvia berbatasan dengan Estonia (sepanjang 343 km) di utara, dengan Lithuania (sepanjang 588 km) di selatan, dengan Rusia (sepanjang 276 km) di timur, dengan Belarus (sepanjang 141 km) di tenggara, dan berbagi perbatasan bahari dengan Swedia di barat. Dengan penduduk sejumlah 2.070.371 jiwa dan wilayah seluas 64.589 km persegi, Latvia adalah salah satu negara yang berpenduduk sedikit dan jarang di Uni Eropa. Pusat pemerintahannya berada di Riga. Bahasa resminya adalah Bahasa Latvia dan satuan mata uangnya adalah Lats (Ls). Negara ini beriklim sedang. Negara ini bergabung dengan Uni Eropa pada 1 Mei 2004 dan dengan NATO pada 29 Maret 2004.",
+            countryHeadGovernment = "Krišjānis Kariņš (Perdana Menteri)",
+            countryCapital = "Riga",
+            countryIndependenceDay = "18 November",
+            countryLanguage = "Latvia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "64.589"
+        ),
+        Country(
+            countryId = 33,
+            countryName = "Lithuania",
+            countryInternationalName = "Lietuvos Respublika",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/125px-Flag_of_Lithuania.svg.png",
+            countryDescription = "Republik Lituania adalah sebuah negara di Eropa Utara. Lituania merupakan salah satu dari tiga negara Baltik yang dekat dengan Laut Baltik. Negara ini berbatasan dengan Latvia di sebelah utara, Belarus di tenggara, Polandia di selatan, dan Oblast Kaliningrad milik Rusia di barat daya dan berbatasan dengan Laut Baltik dengan Swedia.\n" +
+                    "\nSejak 2004, Lituania merupakan salah satu negara Uni Eropa yang memasuki kawasan Schengen, yang tidak memiliki kontrol perbatasan. Sejak 2015 negara milik kawasan euro. Lithuania adalah ekonomi maju dengan pendapatan tinggi, setelah mencapai standar hidup yang tinggi, tingkat kebebasan sipil Lituania, kebebasan media, kebebasan internet dan demokrasi sangat dihargai. Lituania adalah anggota Uni Eropa (sejak 2004), Dewan Eropa, NATO dan OECD.",
+            countryHeadGovernment = "Ingrida Šimonytė (Perdana Menteri)",
+            countryCapital = "Vilnius",
+            countryIndependenceDay = "11 Maret",
+            countryLanguage = "Lituavi",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "65.300"
+        ),
+        Country(
+            countryId = 34,
+            countryName = "Rumania",
+            countryInternationalName = "România",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/125px-Flag_of_Romania.svg.png",
+            countryDescription = "Rumania adalah negara yang terletak di Eropa Tengah dan Tenggara, di bagian utara Semenanjung Balkan dan berbatasan dengan Laut Hitam.[6] Hampir seluruh delta sungai Donau terletak di wilayah Rumania. Negara ini berbatasan dengan Hongaria dan Serbia di barat, Ukraina dan Republik Moldova di timur laut, dan Bulgaria di selatan.",
+            countryHeadGovernment = "Nicolae Ciucă (Perdana Menteri)",
+            countryCapital = "Bukares",
+            countryIndependenceDay = "1 Desember",
+            countryLanguage = "Rumania",
+            countryCurrency = "Leu Rumania (RON)",
+            countryLandArea = "238.391"
+        ),
+        Country(
+            countryId = 35,
+            countryName = "Slowakia",
+            countryInternationalName = "Slovenská Republika",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/125px-Flag_of_Slovakia.svg.png",
+            countryDescription = "Republik Slowakia adalah negara berdaulat di Eropa Tengah pecahan Cekoslowakia. Negara yang terkurung di wilayah daratan ini berbatasan langsung dengan Polandia di utara, Republik Ceko di barat laut, Ukraina di timur, Hongaria di selatan, dan Austria di barat daya.\n" +
+                    "\nSlowakia merupakan negara pegunungan dengan luas wilayah 49.000 km persegi dengan jumlah penduduk lebih dari 5.6 juta jiwa. Negara ini beribukota di Bratislava, dan kota terbesar keduanya adalah Kosice. Sebelumnya negara ini merupakan bagian dari kerajaan Moravia Besar dan Austro-Hongaria. Sejak tanggal 1 Januari 2009 Slowakia mulai menggunakan mata uang Euro.",
+            countryHeadGovernment = "Eduard Heger (Perdana Menteri)",
+            countryCapital = "Bratislava",
+            countryIndependenceDay = "17 Juli",
+            countryLanguage = "Slowakia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "49.035"
+        ),
+        Country(
+            countryId = 36,
+            countryName = "Slovenia",
+            countryInternationalName = "Republika Slovenija",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/125px-Flag_of_Slovenia.svg.png",
+            countryDescription = "Republik Slovenia adalah sebuah negara pesisir sub-Alpen di Eropa Tengah. Slovenia berbatasan dengan Italia di barat, Austria di utara, Hongaria di timurlaut, Kroasia di tenggara, dan Laut Adriatik di baratdaya. Slovenia didominasi pegunungan dan hutan, dengan luas wilayah 20.271 kilometer persegi, dan dengan jumlah penduduk sebanyak 2.107.007 jiwa, yang 300.000 di antaranya menetap di kota terbesar dan pusat pemerintahan, Ljubljana. Etnis Slovenia membentuk mayoritas mutlak populasi negara. Bahasa Slovenia, salah satu anggota rumpun bahasa Slavia Selatan, merupakan bahasa resmi. Slovenia memiliki iklim yang didominasi iklim benua, dengan perkecualian kawasan pesisir dan Pegunungan Alpen Julian. Iklim sub-mediterania mencapai perpanjangan utara Pegunungan Alpen Dinari yang merentasi negara dalam arah barat laut-tenggara. Pegunungan Alpen Julian di barat laut memiliki iklim Alpen. Iklim benua semakin jelas menuju Cekungan Pannonia di Timur Laut. Kota terbesar dan pusat pemerintahan, Ljubljana, terletak di tengah-tengah negara.",
+            countryHeadGovernment = "Janez Janša (Perdana Menteri)",
+            countryCapital = "Ljubljana",
+            countryIndependenceDay = "26 Desember",
+            countryLanguage = "Slovenia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "20.273"
+        ),
+        Country(
+            countryId = 37,
+            countryName = "Albania",
+            countryInternationalName = "Republika e Shqipërisë",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/125px-Flag_of_Albania.svg.png",
+            countryDescription = "Albania adalah sebuah negara yang terletak di Eropa Tenggara. Negara ini berbatasan dengan Montenegro di sebelah utara, Kosovo di timur laut, Makedonia Utara di timur, dan Yunani di selatan, Laut Adriatik terletak di sebelah barat Albania, sedangkan Laut Ionia di barat daya.\n" +
+                    "\nAlbania di dalam bahasanya dipanggil Shqipëria, yang berarti Tanah Air Burung Elang. Orang Albania mengaitkan definisi ini sebagai julukan dari kaum mereka secara keseluruhan, dan julukan ini juga dikaitkan sebagai pengartian dari gambar burung elang berkepala dua di bendera dan emblem Albania (burung elang berkepala dua ini sebenarnya adalah lambang dari Kekaisaran Bizantium yang pernah menguasai daerah Balkan dan Anatolia, yang secara bergiliran diambil dari peradaban-peradaban pra-Romawi di Anatolia. Lambang ini juga dapat ditemukan di emblem negara-negara lain, seperti Rusia). Nama \"Albania\" pula mungkin berasal dari perkataan Indo-Eropa albh (putih).",
+            countryHeadGovernment = "Edi Rama (Perdana Menteri)",
+            countryCapital = "Tirana",
+            countryIndependenceDay = "28 November",
+            countryLanguage = "Albania",
+            countryCurrency = "Lek (ALL)",
+            countryLandArea = "28.748"
+        ),
+        Country(
+            countryId = 38,
+            countryName = "Kroasia",
+            countryInternationalName = "Republika Hrvatska",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/125px-Flag_of_Croatia.svg.png",
+            countryDescription = "Republik Kroasia adalah negara Balkan di persimpangan Eropa Tengah dan Eropa Tenggara, dan juga merupakan negara yang berbentuk bulan sabit. Negara ini berbatasan dengan Slovenia di barat laut, Hongaria di timur laut, Serbia di timur, Bosnia dan Herzegovina dan Montenegro di tenggara, dan berbagi perbatasan laut dengan Italia di barat dan barat daya.\n" +
+                    "\nDalam sejarahnya, negara ini merupakan negara republik untuk Republik Sosialis Federal Yugoslavia. Negara ini melepaskan diri dan memperoleh kemerdekaan pada 1991 dan merupakan anggota kandidat dari Uni Eropa, PBB, Organisasi untuk Keamanan dan Co-operasi di Eropa, Dewan Eropa, dan anggota tidak tetap dari Dewan Keamanan Perserikatan Bangsa-Bangsa untuk periode 2008-2009. Negara ini juga anggota Uni Eropa dan NATO. Kroasia resmi bergabung dengan NATO pada April 2009,[5] sehingga ada dua negara bekas anggota Republik Sosialis Federal Yugoslavia yang bergabung dengan aliansi militer tersebut, yaitu Kroasia dan Slovenia. Selain itu, Kroasia juga merupakan anggota dari Uni untuk Mediterania setelah didirikan pada 2008.",
+            countryHeadGovernment = "Andrej Plenković (Perdana Menteri)",
+            countryCapital = "Zagreb",
+            countryIndependenceDay = "25 Juni",
+            countryLanguage = "Kroasia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "56.594"
+        ),
+        Country(
+            countryId = 39,
+            countryName = "Montenegro",
+            countryInternationalName = "Crna Gora",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/125px-Flag_of_Montenegro.svg.png",
+            countryDescription = "Montenegro adalah sebuah negara yang terletak di Eropa Selatan. Tepatnya berada di negara Balkan dan berbatasan dengan Laut Adriatik di selatan, Kroasia di barat, Bosnia dan Herzegovina dan Serbia di utara, dan Albania di selatan. Sebagai ibu kota negara adalah Podgorica. Menurut konstitusinya, negara ini merupakan negara demokratik, sosial, dan ekologikal.",
+            countryHeadGovernment = "Dritan Abazović (Perdana Menteri)",
+            countryCapital = "Podgorica",
+            countryIndependenceDay = "21 Mei",
+            countryLanguage = "Montenegro, Albania, Bosnia, Kroasia, Serbia",
+            countryCurrency = "Euro (EUR)",
+            countryLandArea = "13.812"
+        ),
+        Country(
+            countryId = 40,
+            countryName = "Makedonia Utara",
+            countryInternationalName = "Republika Severna Makedonija",
+            countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/125px-Flag_of_North_Macedonia.svg.png",
+            countryDescription = "Republik Makedonia Utara adalah negara yang terletak di Semenanjung Balkan, Eropa Selatan. Negara ini berbatasan dengan Serbia dan Kosovo di utara, Albania di barat, Yunani di selatan, dan Bulgaria di timur.\n" +
+                    "\nNegara ini disebut \"Republik Makedonia Bekas Yugoslavia\" (bahasa Inggris: Former Yugoslav Republic of Macedonia) oleh Perserikatan Bangsa-Bangsa sejak tahun 1993 sembari menunggu resolusi mengenai persengketaan penamaan dengan Yunani. Banyak institusi internasional dan negara lain telah mengakui negara ini dengan nama yang sama, meskipun mayoritas negara mengakui negara ini dengan nama konstitusional. Baru semejak tanggal 12 Februari 2019, Republik Makedonia resmi mengubah namanya menjadi Republik Makedonia Utara, mengakhiri sengketa nama.\n" +
+                    "\nRepublik Makedonia Utara mencakup 35,8% wilayah dan 40,9% populasi wilayah Makedonia. Ibu kotanya adalah Skopje, yang dihuni 506.926 jiwa penduduk pada tahun 2004. Negara ini memiliki beberapa kota yang lebih kecil, seperti Bitola, Kumanovo, Prilep, Tetovo, Ohrid, Veles, Štip, Kočani, Gostivar, dan Strumica. Di Makedonia Utara, terdapat lebih daripada 50 danau alami dan waduk, dan juga memiliki enam belas gunung yang memiliki tinggi lebih dari 2.000 meter dari permukaan laut.\n" +
+                    "\nNegara ini merupakan anggota PBB, NATO, dan Majelis Eropa; serta juga anggota dari La Francophonie, World Trade Organization (WTO), dan Organization for Security and Cooperation in Europe. Sejak Desember 2005, negara ini menjadi kandidat anggota Uni Eropa.",
+            countryHeadGovernment = "Dimitar Kovačevski (Perdana Menteri)",
+            countryCapital = "Skopje",
+            countryIndependenceDay = "8 September",
+            countryLanguage = "Makedonia, Albania",
+            countryCurrency = "Denar Makedonia (MKD)",
+            countryLandArea = "25.713"
+        ),
     )
 }
