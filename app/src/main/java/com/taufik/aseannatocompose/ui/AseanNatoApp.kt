@@ -61,9 +61,17 @@ fun AseanNatoApp(
                         countryName = country.countryName,
                         countryInternationalName = country.countryInternationalName,
                         countryFlagUrl = country.countryFlagUrl,
+                        countryCapital = country.countryCapital,
+                        countryIndependenceDay = country.countryIndependenceDay,
+                        countryDescription = country.countryIndependenceDay,
+                        countryCurrency = country.countryCurrency,
+                        countryHeadGovernment = country.countryHeadGovernment,
+                        countryLandArea = country.countryLandArea,
+                        countryLanguage = country.countryLanguage,
+                        isShow = true,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .animateItemPlacement(tween(durationMillis = 100))
+                            .animateItemPlacement(tween(durationMillis = 100)),
                     )
                 }
             }
