@@ -23,6 +23,7 @@ import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
 fun CountryListItem(
+    modifier: Modifier = Modifier,
     context: Context = LocalContext.current,
     countryName: String = "",
     countryInternationalName: String = "",
@@ -34,8 +35,7 @@ fun CountryListItem(
     countryLanguage: String  = "",
     countryCurrency: String  = "",
     countryLandArea: String  = "",
-    isShow: Boolean = false,
-    modifier: Modifier = Modifier
+    isShow: Boolean = false
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
