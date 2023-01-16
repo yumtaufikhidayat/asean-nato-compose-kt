@@ -18,7 +18,7 @@ fun CountriesHeader(
     modifier: Modifier = Modifier
 ) {
     Surface(
-        color = MaterialTheme.colors.primary,
+        color = MaterialTheme.colors.primaryVariant,
         modifier = modifier
     ) {
         Text(

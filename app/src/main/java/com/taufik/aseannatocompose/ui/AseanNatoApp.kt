@@ -18,10 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.taufik.aseannatocompose.ViewModelFactory
 import com.taufik.aseannatocompose.data.CountryRepository
-import com.taufik.aseannatocompose.ui.components.CountriesHeader
-import com.taufik.aseannatocompose.ui.components.CountryListItem
-import com.taufik.aseannatocompose.ui.components.ScrollToTopButton
-import com.taufik.aseannatocompose.ui.components.SearchBar
+import com.taufik.aseannatocompose.ui.components.*
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 import kotlinx.coroutines.launch
 
@@ -46,10 +43,13 @@ fun AseanNatoApp(
             contentPadding = PaddingValues(bottom = 80.dp)
         ) {
             item {
+                ToolbarHeader(
+                    title = "ASEAN-NATO Countries",
+                )
                 SearchBar(
                     query = query,
                     onQueryChange = viewModel::search,
-                    modifier = Modifier.background(MaterialTheme.colors.primary)
+                    modifier = Modifier.background(MaterialTheme.colors.primaryVariant)
                 )
             }
             groupedCountries.forEach { (initial, countries) ->
