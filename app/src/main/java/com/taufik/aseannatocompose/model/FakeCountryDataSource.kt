@@ -196,7 +196,7 @@ object FakeCountryDataSource {
             countryIndependenceDay = "5 Mei",
             countryLanguage = "Belanda",
             countryCurrency = "Euro (EUR)",
-            countryLandArea = "41.54341.543"
+            countryLandArea = "41.543"
         ),
         Country(
             countryId = 16,

@@ -51,7 +51,7 @@ fun CountryListItem(
                     "\n$countryLanguage" +
                     "\n$countryCurrency" +
                     "\n$countryLandArea",
-                Toast.LENGTH_SHORT
+                Toast.LENGTH_LONG
             ).show()
         }
     ) {
