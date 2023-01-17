@@ -1,12 +1,42 @@
 # asean-nato-compose-kt
 Repository to complete Belajar Membuat Aplikasi Android dengan Jetpack Compose class from Dicoding. This app is about list of ASEAN and NATO countries. They are:
-- Brunei Darussalam
-- Filipina
-- Indonesia
-- Kamboja
-- Laos
-- Malaysia
-- Myanmar
-- Singapura
-- Thailand
-- Vietnam
+- Albania (Albania)
+- Amerika Serikat (United States of America)
+- Belanda (Netherland)
+- Belgia (Kingdom of Belgium)
+- Brunei Darussalam (Brunei Darussalam)
+- Bulgaria (Republic of Bulgaria)
+- Ceko (Czech Republic)
+- Denmark (Denmark)
+- Estonia (Republic of Estonia)
+- Filipina (Republic of the Philippines)
+- Hugaria (Republic of Hungary)
+- Indonesia (Republic of Indonesia)
+- Inggris (England)
+- Islandia (Iceland)
+- Italia (Republic of Italia)
+- Jerman (Germany)
+- Kamboja (Kingdom of Cambodia)
+- Kanada (Dominion of Canada)
+- Kroasia (Republic of Croatia)
+- Laos (Lao People's Democratic Republic)
+- Latvia (Republic of Latvia)
+- Lithuania (Republic of Lithuania)
+- Luxembourg (Grand Duchy of Luxembourg)
+- Makedonia Utara (Republic of Macedonia)
+- Malaysia (Malaysia)
+- Montenegro (Montenegro)
+- Myanmar (Republic of the Union of Myanmar)
+- Norwegia (Republic of Norway)
+- Polandia (Poland)
+- Portugal (Republic of Portugal)
+- Prancis (France)
+- Rumania (Romania)
+- Singapura (Republic of Singapore)
+- Slovenia (Republiic of Slovenia)
+- Slovakia (Republic of Slovakia)
+- Spanyol (Spain)
+- Thailand (Kingdom of Thailand)
+- Turkiye (Republic of Turkey)
+- Vietnam (Socialist Republic of Vietnam)
+- Yunani (Greek)
