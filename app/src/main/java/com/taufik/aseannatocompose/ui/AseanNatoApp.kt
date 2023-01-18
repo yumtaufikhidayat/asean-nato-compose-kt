@@ -58,12 +58,13 @@ fun AseanNatoApp(
                 }
                 items(countries, key = { it.countryId} ) { country ->
                     CountryListItem(
+                        countryId = country.countryId,
                         countryName = country.countryName,
                         countryInternationalName = country.countryInternationalName,
                         countryFlagUrl = country.countryFlagUrl,
                         countryCapital = country.countryCapital,
                         countryIndependenceDay = country.countryIndependenceDay,
-                        countryDescription = country.countryIndependenceDay,
+                        countryDescription = country.countryDescription,
                         countryCurrency = country.countryCurrency,
                         countryHeadGovernment = country.countryHeadGovernment,
                         countryLandArea = country.countryLandArea,
