@@ -46,16 +46,16 @@ fun CountryListItem(
         modifier = modifier.clickable {
             Toast.makeText(
                 context,
-                "$countryId" +
-                        "\n$countryName" +
-                        "\n$countryInternationalName" +
-                        "\n$countryDescription" +
-                        "\n$countryHeadGovernment" +
-                        "\n$countryCapital" +
-                        "\n$countryIndependenceDay" +
-                        "\n$countryLanguage" +
-                        "\n$countryCurrency" +
-                        "\n$countryLandArea",
+                "countryId: $countryId" +
+                        "\ncountryName: $countryName" +
+                        "\ncountryInternationalName: $countryInternationalName" +
+                        "\ncountryDescription: $countryDescription" +
+                        "\ncountryHeadGovernment: $countryHeadGovernment" +
+                        "\ncountryCapital: $countryCapital" +
+                        "\ncountryIndependenceDay: $countryIndependenceDay" +
+                        "\ncountryLanguage: $countryLanguage" +
+                        "\ncountryCurrency: $countryCurrency" +
+                        "\ncountryLandArea: $countryLandArea",
                 Toast.LENGTH_LONG
             ).show()
         }
