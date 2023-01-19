@@ -10,7 +10,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import com.taufik.aseancompose.R
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+import com.taufik.aseannatocompose.R
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
@@ -18,6 +20,8 @@ fun ToolbarHeader(
     modifier: Modifier = Modifier,
     title: String = "",
     context: Context = LocalContext.current,
+    navigateToProfile: () -> Unit,
+    navController: NavHostController = rememberNavController()
 ) {
     TopAppBar(
         title = {
@@ -28,6 +32,7 @@ fun ToolbarHeader(
         },
         actions = {
             IconButton(onClick = {
+                navigateToProfile()
                 Toast.makeText(context, "Profil", Toast.LENGTH_SHORT).show()
             }) {
                 Icon(painter = painterResource(id = R.drawable.ic_account), contentDescription = null)
@@ -42,6 +47,6 @@ fun ToolbarHeader(
 @Composable
 fun ToolbarHeaderPreview() {
     AseanNatoComposeTheme {
-        ToolbarHeader(title = "ASEAN-NATO Countries")
+        ToolbarHeader(title = "ASEAN-NATO Countries", navigateToProfile = {})
     }
 }
