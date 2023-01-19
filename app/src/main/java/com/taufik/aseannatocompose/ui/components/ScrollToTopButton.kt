@@ -15,7 +15,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.taufik.aseancompose.R
+import com.taufik.aseannatocompose.R
 
 @Composable
 fun ScrollToTopButton(
