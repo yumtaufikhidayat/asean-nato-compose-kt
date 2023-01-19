@@ -1,7 +1,6 @@
 package com.taufik.aseannatocompose.ui
 
 import androidx.compose.animation.*
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -16,9 +15,15 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.taufik.aseannatocompose.ViewModelFactory
 import com.taufik.aseannatocompose.data.CountryRepository
+import com.taufik.aseannatocompose.navigation.Screen
 import com.taufik.aseannatocompose.ui.components.*
+import com.taufik.aseannatocompose.ui.screen.HomeScreen
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 import kotlinx.coroutines.launch
 
@@ -26,7 +31,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun AseanNatoApp(
     modifier: Modifier = Modifier,
-    viewModel: CountryViewModel = viewModel(factory = ViewModelFactory(CountryRepository()))
+    viewModel: CountryViewModel = viewModel(factory = ViewModelFactory(CountryRepository())),
+    navController: NavHostController = rememberNavController()
 ) {
     val groupedCountries by viewModel.groupedCountries.collectAsState()
     val query by viewModel.query
@@ -43,9 +49,21 @@ fun AseanNatoApp(
             contentPadding = PaddingValues(bottom = 80.dp)
         ) {
             item {
-                ToolbarHeader(
-                    title = "ASEAN-NATO Countries",
-                )
+                NavHost(
+                    navController = navController,
+                    startDestination = Screen.Home.route,
+                    modifier = modifier
+                ) {
+                    composable(Screen.Home.route) {
+                        ToolbarHeader(
+                            title = "ASEAN-NATO Countries",
+                            navigateToProfile = {
+                                navController.navigate(Screen.Profile.route)
+                            }
+                        )
+                    }
+                }
+
                 SearchBar(
                     query = query,
                     onQueryChange = viewModel::search,
@@ -56,24 +74,21 @@ fun AseanNatoApp(
                 stickyHeader {
                     CountriesHeader(char = initial)
                 }
-                items(countries, key = { it.countryId} ) { country ->
-                    CountryListItem(
-                        countryId = country.countryId,
-                        countryName = country.countryName,
-                        countryInternationalName = country.countryInternationalName,
-                        countryFlagUrl = country.countryFlagUrl,
-                        countryCapital = country.countryCapital,
-                        countryIndependenceDay = country.countryIndependenceDay,
-                        countryDescription = country.countryDescription,
-                        countryCurrency = country.countryCurrency,
-                        countryHeadGovernment = country.countryHeadGovernment,
-                        countryLandArea = country.countryLandArea,
-                        countryLanguage = country.countryLanguage,
-                        isShow = true,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .animateItemPlacement(tween(durationMillis = 100)),
-                    )
+                items(countries, key = { it.countryId }) { country ->
+                    NavHost(
+                        navController = navController,
+                        startDestination = Screen.Home.route,
+                        modifier = modifier
+                    ) {
+                        composable(Screen.Home.route) {
+                            HomeScreen(
+                                navigateToDetail = {
+                                    navController.navigate(Screen.Detail.createRoute(it))
+                                },
+                                country = country
+                            )
+                        }
+                    }
                 }
             }
         }
