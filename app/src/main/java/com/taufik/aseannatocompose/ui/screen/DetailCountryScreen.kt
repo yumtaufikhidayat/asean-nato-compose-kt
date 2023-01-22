@@ -8,6 +8,7 @@ import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -22,25 +23,52 @@ import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.taufik.aseannatocompose.R
+import com.taufik.aseannatocompose.ViewModelFactory
+import com.taufik.aseannatocompose.di.Injection
+import com.taufik.aseannatocompose.ui.common.UiState
+import com.taufik.aseannatocompose.ui.screen.detail.DetailViewModel
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
 fun DetailCountryScreen(
     modifier: Modifier = Modifier,
-    detailId: Int = 0
+    detailId: Int,
+    viewModel: DetailViewModel = viewModel(
+        factory = ViewModelFactory(
+            Injection.provideRepository()
+        )
+    )
 ) {
-    /*DetailContent(
-        modifier,
-        detailId,
-    )*/
+    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
+        when (uiState) {
+            is UiState.Loading -> viewModel.getCountryById(detailId)
+            is UiState.Success -> {
+                val data = uiState.data
+                DetailContent(
+                    modifier = modifier,
+                    countryImage = data.countryFlagUrl,
+                    countryName = data.countryName,
+                    countryInternationalName = data.countryInternationalName,
+                    countryDescription = data.countryDescription,
+                    countryCapital = data.countryCapital,
+                    countryHeadGovernment = data.countryHeadGovernment,
+                    countryIndependenceDay = data.countryIndependenceDay,
+                    countryLanguage = data.countryLanguage,
+                    countryCurrency = data.countryCurrency,
+                    countryLandArea = data.countryLandArea
+                )
+            }
+            is UiState.Error -> {}
+        }
+    }
 }
 
 @Composable
 fun DetailContent(
-    modifier: Modifier = Modifier,
-    detailId: Int,
+    modifier: Modifier,
     countryImage: String,
     countryName: String,
     countryInternationalName: String,
@@ -65,6 +93,12 @@ fun DetailContent(
         ) {
             Card(
                 modifier = modifier
+                    .height(250.dp)
+                    .fillMaxWidth(),
+                backgroundColor = MaterialTheme.colors.primaryVariant,
+            ) {}
+            Card(
+                modifier = modifier
                     .fillMaxWidth()
                     .padding(
                         top = 60.dp,
@@ -77,7 +111,6 @@ fun DetailContent(
                 elevation = 10.dp
             ) {
                 Column(
-                    modifier = modifier,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
@@ -97,7 +130,6 @@ fun DetailContent(
                     )
                     Text(
                         text = countryDescription,
-                        fontSize = 16.sp,
                         modifier = modifier
                             .fillMaxWidth()
                             .padding(
@@ -106,9 +138,7 @@ fun DetailContent(
                                 end = 16.dp,
                             )
                     )
-                    Column(
-                        modifier = modifier
-                    ) {
+                    Column {
                         Text(
                             text = stringResource(id = R.string.text_summary),
                             fontWeight = FontWeight.Bold,
@@ -124,38 +154,41 @@ fun DetailContent(
                             modifier = modifier.padding(2.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_outline_office),
-                                contentDescription = stringResource(id = R.string.text_capital),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(4.dp, MaterialTheme.colors.primaryVariant),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = MaterialTheme.colors.primaryVariant,
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_office),
+                                    contentDescription = stringResource(id = R.string.text_capital),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_capital),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
-                                        start = 16.dp,
+                                        start = 15.dp,
                                         end = 16.dp,
                                     )
                                 )
                                 Text(
                                     text = countryCapital,
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -167,30 +200,32 @@ fun DetailContent(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = modifier.padding(top = 16.dp)
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_head_government),
-                                contentDescription = stringResource(id = R.string.text_head_government),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(2.dp, colorResource(R.color.red)),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = colorResource(R.color.red),
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_head_government),
+                                    contentDescription = stringResource(id = R.string.text_head_government),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_head_government),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 15.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -199,6 +234,7 @@ fun DetailContent(
                                 Text(
                                     text = countryHeadGovernment,
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -210,30 +246,32 @@ fun DetailContent(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = modifier.padding(top = 16.dp)
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_outline_calendar),
-                                contentDescription = stringResource(id = R.string.text_independence_day),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(2.dp, colorResource(id = R.color.blue)),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = colorResource(id = R.color.blue),
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_calendar),
+                                    contentDescription = stringResource(id = R.string.text_independence_day),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_independence_day),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 15.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -242,6 +280,7 @@ fun DetailContent(
                                 Text(
                                     text = countryIndependenceDay,
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -253,30 +292,32 @@ fun DetailContent(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = modifier.padding(top = 16.dp)
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_outline_language),
-                                contentDescription = stringResource(id = R.string.text_official_language),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(2.dp, colorResource(id = R.color.orange)),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = colorResource(id = R.color.orange),
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_language),
+                                    contentDescription = stringResource(id = R.string.text_official_language),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_official_language),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 15.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                     )
@@ -284,6 +325,7 @@ fun DetailContent(
                                 Text(
                                     text = countryLanguage,
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -295,30 +337,32 @@ fun DetailContent(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = modifier.padding(top = 16.dp)
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_outline_currency),
-                                contentDescription = stringResource(id = R.string.text_currency),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(2.dp, colorResource(id = R.color.green)),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = colorResource(id = R.color.green),
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_currency),
+                                    contentDescription = stringResource(id = R.string.text_currency),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_currency),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 15.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -327,6 +371,7 @@ fun DetailContent(
                                 Text(
                                     text = countryCurrency,
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -341,38 +386,41 @@ fun DetailContent(
                                 bottom = 16.dp
                             )
                         ) {
-                            Image(
-                                painter = painterResource(R.drawable.ic_outline_land_area),
-                                contentDescription = stringResource(id = R.string.text_land_area),
-                                contentScale = ContentScale.Crop,
+                            Box(
                                 modifier = modifier
                                     .padding(start = 16.dp)
-                                    .border(
-                                        BorderStroke(2.dp, colorResource(id = R.color.yellow)),
-                                        CircleShape
-                                    )
                                     .background(
                                         color = colorResource(id = R.color.yellow),
                                         shape = CircleShape
                                     )
                                     .size(40.dp)
                                     .clip(CircleShape)
-                            )
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_land_area),
+                                    contentDescription = stringResource(id = R.string.text_land_area),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
                             Column(
                                 modifier = modifier.fillMaxWidth()
                             ) {
                                 Text(
                                     text = stringResource(id = R.string.text_land_area),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp,
+                                    fontSize = 15.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
                                     )
                                 )
                                 Text(
-                                    text = countryLandArea,
+                                    text = "$countryLandArea km2",
                                     fontStyle = FontStyle.Normal,
+                                    fontSize = 14.sp,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -407,7 +455,6 @@ fun DetailContentPreview() {
     AseanNatoComposeTheme {
         DetailContent(
             modifier = Modifier,
-            detailId = 0,
             countryImage = "",
             countryName = "Indonesia",
             countryInternationalName = "Republik Indonesia",
