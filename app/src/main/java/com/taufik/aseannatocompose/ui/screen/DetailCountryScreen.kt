@@ -172,7 +172,6 @@ fun DetailContent(
                                 contentDescription = stringResource(id = R.string.text_head_government),
                                 contentScale = ContentScale.Crop,
                                 modifier = modifier
-                                    .size(40.dp)
                                     .padding(start = 16.dp)
                                     .border(
                                         BorderStroke(2.dp, colorResource(R.color.red)),
@@ -182,6 +181,7 @@ fun DetailContent(
                                         color = colorResource(R.color.red),
                                         shape = CircleShape
                                     )
+                                    .size(40.dp)
                                     .clip(CircleShape)
                             )
                             Column(
@@ -215,7 +215,6 @@ fun DetailContent(
                                 contentDescription = stringResource(id = R.string.text_independence_day),
                                 contentScale = ContentScale.Crop,
                                 modifier = modifier
-                                    .size(40.dp)
                                     .padding(start = 16.dp)
                                     .border(
                                         BorderStroke(2.dp, colorResource(id = R.color.blue)),
@@ -225,6 +224,7 @@ fun DetailContent(
                                         color = colorResource(id = R.color.blue),
                                         shape = CircleShape
                                     )
+                                    .size(40.dp)
                                     .clip(CircleShape)
                             )
                             Column(
@@ -258,7 +258,6 @@ fun DetailContent(
                                 contentDescription = stringResource(id = R.string.text_official_language),
                                 contentScale = ContentScale.Crop,
                                 modifier = modifier
-                                    .size(40.dp)
                                     .padding(start = 16.dp)
                                     .border(
                                         BorderStroke(2.dp, colorResource(id = R.color.orange)),
@@ -268,6 +267,7 @@ fun DetailContent(
                                         color = colorResource(id = R.color.orange),
                                         shape = CircleShape
                                     )
+                                    .size(40.dp)
                                     .clip(CircleShape)
                             )
                             Column(
@@ -300,7 +300,6 @@ fun DetailContent(
                                 contentDescription = stringResource(id = R.string.text_currency),
                                 contentScale = ContentScale.Crop,
                                 modifier = modifier
-                                    .size(40.dp)
                                     .padding(start = 16.dp)
                                     .border(
                                         BorderStroke(2.dp, colorResource(id = R.color.green)),
@@ -310,6 +309,7 @@ fun DetailContent(
                                         color = colorResource(id = R.color.green),
                                         shape = CircleShape
                                     )
+                                    .size(40.dp)
                                     .clip(CircleShape)
                             )
                             Column(
@@ -346,7 +346,6 @@ fun DetailContent(
                                 contentDescription = stringResource(id = R.string.text_land_area),
                                 contentScale = ContentScale.Crop,
                                 modifier = modifier
-                                    .size(40.dp)
                                     .padding(start = 16.dp)
                                     .border(
                                         BorderStroke(2.dp, colorResource(id = R.color.yellow)),
@@ -356,6 +355,7 @@ fun DetailContent(
                                         color = colorResource(id = R.color.yellow),
                                         shape = CircleShape
                                     )
+                                    .size(40.dp)
                                     .clip(CircleShape)
                             )
                             Column(
