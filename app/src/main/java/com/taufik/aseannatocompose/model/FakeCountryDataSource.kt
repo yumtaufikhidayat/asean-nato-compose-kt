@@ -177,7 +177,7 @@ object FakeCountryDataSource {
             countryInternationalName = "Kingdom of Belgium",
             countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Belgium_%28civil%29.svg/255px-Flag_of_Belgium_%28civil%29.svg.png",
             countryDescription = "Belgia sebuah negara di Eropa bagian barat. Di sebelah utara, Belgia berbatasan dengan Belanda, di sebelah timur dengan Jerman, di sebelah selatan dengan Prancis dan Luksemburg, dan di sebelah barat dengan Laut Utara, di seberang Britania Raya. Negara ini memiliki luas mencapai 30.689 kilometer persegi (11.849 sq mi) dan populasi lebih dari 11,5 juta, membuatnya negara ke-22 paling padat di dunia dan ke-6 paling padat di Eropa dengan kepadatan 376 per kilometer persegi (970/sq mi). Ibu kota dan kota terbesar di negara ini adalah Brussel; kota besar lain meliputi Antwerpen, Gent, Brugge, Namur dan Leuven.\n" +
-                    "\n Negara ini adalah sebuah kerajaan konstitusional federal dengan sistem parlementer. Negara ini dibagi menjadi tiga negara bagian: Daerah Flandria di utara, Daerah Walonia di selatan, dan Daerah Ibukota Brussel.",
+                    "\nNegara ini adalah sebuah kerajaan konstitusional federal dengan sistem parlementer. Negara ini dibagi menjadi tiga negara bagian: Daerah Flandria di utara, Daerah Walonia di selatan, dan Daerah Ibukota Brussel.",
             countryHeadGovernment = "Alexander De Croo (Perdana Menteri)",
             countryCapital = "Brussels",
             countryIndependenceDay = "21 Juli",
@@ -217,7 +217,7 @@ object FakeCountryDataSource {
             countryInternationalName = "Dominion of Canada",
             countryFlagUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/125px-Flag_of_Canada_%28Pantone%29.svg.png",
             countryDescription = "Kanada, dengan nama asli Dominion of Canada, merupakan negara paling utara di kawasan Amerika Utara. Kerajaan ni terdiri dalam 10 provinsi dan 3 teritori, dengan menganut sistem desentralisasi. Kanada berdiri pada tahun 1867, setelah disahkannya undang-undang Konfederasi. Ottawa menjadi ibukota negara ini. Kantor Gubernur Jenderal, Perdana Menteri, serta parlemen nasional terletak di kota tersebut. Kanada pernah menjadi jajahan Prancis; yang kemudian direbut oleh Inggris, hingga hari kemerdekaannya. Kini, negara ini menjadi anggota La Francophonie, sekaligus negara Persemakmuran Inggris. Luas Kanada mencapai 9.970.610 km². Negara ini tergolong negara maju, yang perekonomiannya bergantung pada hasil alam.\n" +
-                    "\n Kanada merupakaan monarki konstitusional, dengan pemerintahan yang berbentuk demokrasi parlementer federal. Raja Charles III menjadi kepala negara.",
+                    "\nKanada merupakaan monarki konstitusional, dengan pemerintahan yang berbentuk demokrasi parlementer federal. Raja Charles III menjadi kepala negara.",
             countryHeadGovernment = "Justin Trudeau (Perdana Menteri)",
             countryCapital = "Ottawa",
             countryIndependenceDay = "1 Juli",
