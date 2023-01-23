@@ -130,6 +130,7 @@ fun DetailContent(
                     )
                     Text(
                         text = countryDescription,
+                        fontSize = 15.sp,
                         modifier = modifier
                             .fillMaxWidth()
                             .padding(
