@@ -22,4 +22,6 @@
     <string name="text_profile_linkedIn_account">https://linkedin.com/in/taufik-hidayat</string>
     <string name="text_profile_github">Github</string>
     <string name="text_profile_github_account">https://github.com/yumtaufikhidayat</string>
+    <string name="text_app_version">Versi Aplikasi</string>
+    <string name="text_version">1.0</string>
 </resources>

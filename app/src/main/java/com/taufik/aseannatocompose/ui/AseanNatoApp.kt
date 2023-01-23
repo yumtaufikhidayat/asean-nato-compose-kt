@@ -29,6 +29,7 @@ import com.taufik.aseannatocompose.ui.components.ToolbarHeader
 import com.taufik.aseannatocompose.ui.screen.detail.DetailCountryScreen
 import com.taufik.aseannatocompose.ui.screen.home.HomeScreen
 import com.taufik.aseannatocompose.ui.screen.profile.ProfileScreen
+import com.taufik.aseannatocompose.ui.screen.splashscreen.SplashScreen
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @OptIn(ExperimentalAnimationApi::class)
@@ -43,6 +44,10 @@ fun AseanNatoApp(
     val iconState = rememberSaveable { (mutableStateOf(true)) }
 
     when (currentRoute) {
+        Screen.Splash.route -> {
+            topBarState.value = false
+            iconState.value = false
+        }
         Screen.Home.route -> {
             topBarState.value = true
             iconState.value = true
@@ -68,9 +73,13 @@ fun AseanNatoApp(
         content = { paddingValues ->
             NavHost(
                 navController = navController,
-                startDestination = Screen.Home.route,
+                startDestination = Screen.Splash.route,
                 modifier = modifier.padding(paddingValues)
             ) {
+                composable(route = Screen.Splash.route) {
+                    SplashScreen(navController = navController)
+                }
+
                 composable(route = Screen.Home.route) {
                     HomeScreen(
                         navigateToDetail = {
@@ -114,8 +123,6 @@ fun TopBar(
 
     AnimatedVisibility(
         visible = topBarState.value,
-        enter = slideInVertically(initialOffsetY = { -it }),
-        exit = slideOutVertically(targetOffsetY = { -it }),
         content = {
             ToolbarHeader(
                 title = title,

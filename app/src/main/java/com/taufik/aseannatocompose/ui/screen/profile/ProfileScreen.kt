@@ -244,7 +244,7 @@ fun ProfileContent(
                         }
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = modifier.padding(top = 16.dp, bottom = 24.dp)
+                            modifier = modifier.padding(top = 16.dp)
                         ) {
                             Box(
                                 modifier = modifier
@@ -278,6 +278,51 @@ fun ProfileContent(
                                 )
                                 Text(
                                     text = stringResource(id = R.string.text_profile_github_account),
+                                    fontStyle = FontStyle.Normal,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
+                                    modifier = modifier.padding(
+                                        start = 16.dp,
+                                        end = 16.dp,
+                                    )
+                                )
+                            }
+                        }
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = modifier.padding(top = 16.dp, bottom = 24.dp)
+                        ) {
+                            Box(
+                                modifier = modifier
+                                    .padding(start = 16.dp)
+                                    .background(
+                                        color = colorResource(id = R.color.green),
+                                        shape = CircleShape
+                                    )
+                                    .size(40.dp)
+                                    .clip(CircleShape)
+                            ) {
+                                Image(
+                                    painter = painterResource(R.drawable.ic_outline_android),
+                                    contentDescription = stringResource(id = R.string.text_profile_github),
+                                    contentScale = ContentScale.Crop,
+                                    modifier = modifier
+                                        .padding(10.dp)
+                                        .size(20.dp)
+                                )
+                            }
+                            Column(
+                                modifier = modifier.fillMaxWidth()
+                            ) {
+                                Text(
+                                    text = stringResource(id = R.string.text_app_version),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
+                                    modifier = modifier.padding(
+                                        start = 16.dp,
+                                    )
+                                )
+                                Text(
+                                    text = stringResource(id = R.string.text_version),
                                     fontStyle = FontStyle.Normal,
                                     fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
