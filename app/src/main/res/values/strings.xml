@@ -1,7 +1,6 @@
 <resources>
-    <string name="app_name">ASEAN-NATO Compose</string>
-    <string name="scroll_to_top">Scroll to Top</string>
-    <string name="search_countries">Cari negara</string>
+    <string name="app_name">ASEAN-NATO Countries</string>
+    <string name="back">Kembali</string>
     <string name="text_summary">Ringkasan</string>
     <string name="text_capital">Ibukota</string>
     <string name="text_head_government">Kepala Pemerintahan</string>
@@ -9,4 +8,5 @@
     <string name="text_official_language">Bahasa Resmi</string>
     <string name="text_currency">Mata Uang</string>
     <string name="text_land_area">Luas Wilayah</string>
+    <string name="profile">Profile</string>
 </resources>
