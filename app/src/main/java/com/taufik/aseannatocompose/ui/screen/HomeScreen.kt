@@ -1,139 +1,65 @@
 package com.taufik.aseannatocompose.ui.screen
 
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import com.taufik.aseannatocompose.R
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.taufik.aseannatocompose.ViewModelFactory
+import com.taufik.aseannatocompose.di.Injection
 import com.taufik.aseannatocompose.model.Country
-import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
+import com.taufik.aseannatocompose.ui.common.UiState
+import com.taufik.aseannatocompose.ui.components.CountryListItem
+import com.taufik.aseannatocompose.ui.screen.home.HomeViewModel
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
     navigateToDetail: (Int) -> Unit,
-    country: Country
+    viewModel: HomeViewModel = viewModel(
+        factory = ViewModelFactory(Injection.provideRepository())
+    ),
 ) {
-    CountryListItem(
-        country = country,
-        modifier = modifier,
-        navigateToDetail = {
-            navigateToDetail(country.countryId)
-        }
-    )
-}
-
-@Composable
-fun CountryListItem(
-    modifier: Modifier = Modifier,
-    country: Country,
-    isShow: Boolean = true,
-    navigateToDetail: (Int) -> Unit
-) {
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.clickable {
-            navigateToDetail(country.countryId)
-        },
-    ) {
-        AsyncImage(
-            model = country.countryFlagUrl,
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
-            placeholder = painterResource(id = R.drawable.ic_solid_purple),
-            modifier = Modifier
-                .padding(8.dp)
-                .size(60.dp)
-                .clip(CircleShape)
-                .border(
-                    border = BorderStroke(2.dp, MaterialTheme.colors.primaryVariant),
-                    shape = CircleShape
-                )
-        )
-
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .weight(1f)
-                .padding(horizontal = 16.dp),
-        ) {
-            if (isShow) {
-                Text(
-                    text = country.countryName,
-                    fontWeight = FontWeight.Bold,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryInternationalName,
-                    fontStyle = FontStyle.Italic,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-            } else {
-                Text(
-                    text = country.countryDescription,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryHeadGovernment,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryCapital,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryIndependenceDay,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryLanguage,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryCurrency,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
-                )
-                Text(
-                    text = country.countryLandArea,
-                    fontWeight = FontWeight.Normal,
-                    modifier = modifier.padding(end = 16.dp),
+    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let {uiState ->
+        when (uiState) {
+            is UiState.Loading -> viewModel.getAllCountries()
+            is UiState.Success -> {
+                HomeContent(
+                    listOfCountries = uiState.data,
+                    modifier = modifier,
+                    navigateToDetail = navigateToDetail
                 )
             }
+            is UiState.Error -> {}
         }
     }
 }
 
-@Preview(showBackground = true)
 @Composable
-fun AseanNatoAppPreview() {
-    AseanNatoComposeTheme {
-        CountryListItem(
-            country = Country(
-                countryName = "Indonesia",
-                countryInternationalName = "Republik Indonesia",
-            ),
-            isShow = true,
-            navigateToDetail = {}
-        )
+private fun HomeContent(
+    listOfCountries: List<Country>,
+    modifier: Modifier,
+    navigateToDetail: (Int) -> Unit
+) {
+    LazyColumn {
+        items(listOfCountries) { data ->
+            CountryListItem(
+                countryName = data.countryName,
+                countryInternationalName = data.countryInternationalName,
+                countryFlagUrl = data.countryFlagUrl,
+                countryDescription = data.countryDescription,
+                countryHeadGovernment = data.countryHeadGovernment,
+                countryCapital = data.countryCapital,
+                countryIndependenceDay = data.countryIndependenceDay,
+                countryLanguage = data.countryLanguage,
+                countryCurrency = data.countryCurrency,
+                countryLandArea = data.countryLandArea,
+                modifier = modifier.clickable {
+                    navigateToDetail(data.countryId)
+                }
+            )
+        }
     }
 }
