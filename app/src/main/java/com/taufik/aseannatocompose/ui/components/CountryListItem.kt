@@ -2,6 +2,7 @@ package com.taufik.aseannatocompose.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
@@ -23,6 +24,7 @@ import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 @Composable
 fun CountryListItem(
     modifier: Modifier = Modifier,
+    countryId: Int,
     countryName: String,
     countryInternationalName: String,
     countryFlagUrl: String,
@@ -34,10 +36,13 @@ fun CountryListItem(
     countryCurrency: String,
     countryLandArea: String,
     isShow: Boolean = true,
+    navigateToDetail: (Int) -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier
+        modifier = modifier.clickable {
+            navigateToDetail(countryId)
+        }
     ) {
         AsyncImage(
             model = countryFlagUrl,
@@ -64,11 +69,13 @@ fun CountryListItem(
                 Text(
                     text = countryName,
                     fontWeight = FontWeight.Bold,
+                    fontSize = MaterialTheme.typography.h6.fontSize,
                     modifier = modifier.padding(end = 16.dp),
                 )
                 Text(
                     text = countryInternationalName,
                     fontStyle = FontStyle.Italic,
+                    fontSize = MaterialTheme.typography.body2.fontSize,
                     modifier = modifier.padding(end = 16.dp),
                 )
             } else {
@@ -117,6 +124,7 @@ fun CountryListItem(
 fun AseanNatoAppPreview() {
     AseanNatoComposeTheme {
         CountryListItem(
+            countryId = 0,
             countryName = "Indonesia",
             countryInternationalName = "Republik Indonesia",
             countryFlagUrl = "",
@@ -126,7 +134,8 @@ fun AseanNatoAppPreview() {
             countryIndependenceDay = "",
             countryLanguage = "",
             countryCurrency = "",
-            countryLandArea = ""
+            countryLandArea = "",
+            navigateToDetail = {}
         )
     }
 }

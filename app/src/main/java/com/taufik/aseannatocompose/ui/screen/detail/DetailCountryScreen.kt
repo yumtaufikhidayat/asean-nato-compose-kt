@@ -1,4 +1,4 @@
-package com.taufik.aseannatocompose.ui.screen
+package com.taufik.aseannatocompose.ui.screen.detail
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
@@ -22,14 +22,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import com.taufik.aseannatocompose.R
 import com.taufik.aseannatocompose.ViewModelFactory
 import com.taufik.aseannatocompose.di.Injection
 import com.taufik.aseannatocompose.ui.common.UiState
-import com.taufik.aseannatocompose.ui.screen.detail.DetailViewModel
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
@@ -88,12 +86,11 @@ fun DetailContent(
         )
     ) {
         Box(
-            contentAlignment = Alignment.TopCenter,
-            modifier = modifier
+            contentAlignment = Alignment.TopCenter
         ) {
             Card(
                 modifier = modifier
-                    .height(250.dp)
+                    .height(200.dp)
                     .fillMaxWidth(),
                 backgroundColor = MaterialTheme.colors.primaryVariant,
             ) {}
@@ -116,7 +113,7 @@ fun DetailContent(
                     Text(
                         text = countryName,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 24.sp,
+                        fontSize = MaterialTheme.typography.h6.fontSize,
                         modifier = modifier.padding(
                             top = 48.dp,
                         )
@@ -124,13 +121,14 @@ fun DetailContent(
                     Text(
                         text = countryInternationalName,
                         fontStyle = FontStyle.Italic,
+                        fontSize = MaterialTheme.typography.caption.fontSize,
                         modifier = modifier.padding(
                             bottom = 16.dp
                         )
                     )
                     Text(
                         text = countryDescription,
-                        fontSize = 15.sp,
+                        fontSize = MaterialTheme.typography.body1.fontSize,
                         modifier = modifier
                             .fillMaxWidth()
                             .padding(
@@ -142,6 +140,7 @@ fun DetailContent(
                     Column {
                         Text(
                             text = stringResource(id = R.string.text_summary),
+                            fontSize = MaterialTheme.typography.body1.fontSize,
                             fontWeight = FontWeight.Bold,
                             modifier = modifier
                                 .padding(
@@ -180,7 +179,7 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_capital),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 15.dp,
                                         end = 16.dp,
@@ -189,7 +188,7 @@ fun DetailContent(
                                 Text(
                                     text = countryCapital,
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -226,7 +225,7 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_head_government),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -235,7 +234,7 @@ fun DetailContent(
                                 Text(
                                     text = countryHeadGovernment,
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -272,7 +271,7 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_independence_day),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -281,7 +280,7 @@ fun DetailContent(
                                 Text(
                                     text = countryIndependenceDay,
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -318,7 +317,7 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_official_language),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                     )
@@ -326,7 +325,7 @@ fun DetailContent(
                                 Text(
                                     text = countryLanguage,
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -363,7 +362,7 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_currency),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -372,7 +371,7 @@ fun DetailContent(
                                 Text(
                                     text = countryCurrency,
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
@@ -412,16 +411,16 @@ fun DetailContent(
                                 Text(
                                     text = stringResource(id = R.string.text_land_area),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.body1.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,
                                     )
                                 )
                                 Text(
-                                    text = "$countryLandArea km2",
+                                    text = "$countryLandArea km²",
                                     fontStyle = FontStyle.Normal,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.body2.fontSize,
                                     modifier = modifier.padding(
                                         start = 16.dp,
                                         end = 16.dp,

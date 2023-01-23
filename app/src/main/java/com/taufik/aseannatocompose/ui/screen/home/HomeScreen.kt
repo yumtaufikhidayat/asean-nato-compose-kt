@@ -1,4 +1,4 @@
-package com.taufik.aseannatocompose.ui.screen
+package com.taufik.aseannatocompose.ui.screen.home
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,17 +12,16 @@ import com.taufik.aseannatocompose.di.Injection
 import com.taufik.aseannatocompose.model.Country
 import com.taufik.aseannatocompose.ui.common.UiState
 import com.taufik.aseannatocompose.ui.components.CountryListItem
-import com.taufik.aseannatocompose.ui.screen.home.HomeViewModel
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     navigateToDetail: (Int) -> Unit,
     viewModel: HomeViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository())
     ),
 ) {
-    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let {uiState ->
+    viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> viewModel.getAllCountries()
             is UiState.Success -> {
@@ -46,6 +45,7 @@ private fun HomeContent(
     LazyColumn {
         items(listOfCountries) { data ->
             CountryListItem(
+                countryId = data.countryId,
                 countryName = data.countryName,
                 countryInternationalName = data.countryInternationalName,
                 countryFlagUrl = data.countryFlagUrl,
@@ -56,9 +56,8 @@ private fun HomeContent(
                 countryLanguage = data.countryLanguage,
                 countryCurrency = data.countryCurrency,
                 countryLandArea = data.countryLandArea,
-                modifier = modifier.clickable {
-                    navigateToDetail(data.countryId)
-                }
+                modifier = modifier,
+                navigateToDetail = navigateToDetail
             )
         }
     }

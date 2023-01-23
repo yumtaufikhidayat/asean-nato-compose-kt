@@ -5,10 +5,11 @@ import androidx.lifecycle.viewModelScope
 import com.taufik.aseannatocompose.data.CountryRepository
 import com.taufik.aseannatocompose.model.Country
 import com.taufik.aseannatocompose.ui.common.UiState
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class DetailViewModel(private val repository: CountryRepository): ViewModel() {
+class DetailViewModel(private val repository: CountryRepository) : ViewModel() {
     private val _uiState: MutableStateFlow<UiState<Country>> =
         MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<Country>>

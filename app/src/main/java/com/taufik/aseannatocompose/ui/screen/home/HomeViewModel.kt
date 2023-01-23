@@ -10,10 +10,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 
-class HomeViewModel(
-    private val repository: CountryRepository
-) : ViewModel() {
-    private val _uiState: MutableStateFlow<UiState<List<Country>>> = MutableStateFlow(UiState.Loading)
+class HomeViewModel(private val repository: CountryRepository) : ViewModel() {
+    private val _uiState: MutableStateFlow<UiState<List<Country>>> =
+        MutableStateFlow(UiState.Loading)
     val uiState: StateFlow<UiState<List<Country>>>
         get() = _uiState
 
