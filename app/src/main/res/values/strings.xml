@@ -9,4 +9,17 @@
     <string name="text_land_area">Luas Wilayah</string>
     <string name="profile">Profile</string>
     <string name="about">Tentang</string>
+    <string name="text_profile_name">Taufik Hidayat</string>
+    <string name="text_profile_job_position">Android Developer</string>
+    <string name="text_profile_about">Taufik got his bachelor as Informatics Engineer from Institut Teknologi Telkom Purwokerto. Since college, he founded a Belajar LibreOffice Indonesia (BLOI) an online free software virtual community on Telegram which has 1000+ members to help others learn LibreOffice software and resolve the issues of using LibreOffice.
+        \n\nIn his free time, he learns and practice by taking Android Development course then choose Android learning path from Dicoding to learn latest Android technology and get latest Android skill. He also loves to learn UI/UX design to build better UI and UX on Android application and improve his another skills.
+        \n\nNow, he is working as an Android Developer at financial service company and develop financial app to help others in financial issues.</string>
+    <string name="text_profile_email">Email</string>
+    <string name="text_profile_email_address">yumtaufikhidayat@gmail.com</string>
+    <string name="text_profile_office">Kantor</string>
+    <string name="text_profile_office_name">PT KB Finansia Multi Finance</string>
+    <string name="text_profile_linkedIn">LinkedIn</string>
+    <string name="text_profile_linkedIn_account">https://linkedin.com/in/taufik-hidayat</string>
+    <string name="text_profile_github">Github</string>
+    <string name="text_profile_github_account">https://github.com/yumtaufikhidayat</string>
 </resources>
