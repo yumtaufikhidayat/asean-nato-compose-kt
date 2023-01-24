@@ -1,5 +1,6 @@
 package com.taufik.aseannatocompose.ui.screen.home
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -42,9 +43,10 @@ private fun HomeContent(
     navigateToDetail: (Int) -> Unit
 ) {
     LazyColumn {
-        items(listOfCountries) { data ->
+        items(listOfCountries, key = {
+            it.countryId
+        }) { data ->
             CountryListItem(
-                countryId = data.countryId,
                 countryName = data.countryName,
                 countryInternationalName = data.countryInternationalName,
                 countryFlagUrl = data.countryFlagUrl,
@@ -55,8 +57,9 @@ private fun HomeContent(
                 countryLanguage = data.countryLanguage,
                 countryCurrency = data.countryCurrency,
                 countryLandArea = data.countryLandArea,
-                modifier = modifier,
-                navigateToDetail = navigateToDetail
+                modifier = modifier.clickable {
+                    navigateToDetail(data.countryId)
+                }
             )
         }
     }

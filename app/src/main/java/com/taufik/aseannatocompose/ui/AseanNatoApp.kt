@@ -88,9 +88,9 @@ fun AseanNatoApp(
 
                 composable(
                     route = Screen.Detail.route,
-                    arguments = listOf(navArgument("detailId") { type = NavType.IntType }),
+                    arguments = listOf(navArgument(Screen.DetailCountryId.route) { type = NavType.IntType }),
                 ) {
-                    val id = it.arguments?.getInt("detailId") ?: 0
+                    val id = it.arguments?.getInt(Screen.DetailCountryId.route) ?: 0
                     DetailCountryScreen(
                         detailId = id
                     )

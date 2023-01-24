@@ -1,15 +1,15 @@
 package com.taufik.aseannatocompose.model
 
 data class Country(
-    var countryId: Int = 0,
-    var countryName: String = "",
-    var countryInternationalName: String = "",
-    var countryFlagUrl: String = "",
-    var countryDescription: String = "",
-    var countryHeadGovernment: String = "",
-    var countryCapital: String = "",
-    var countryIndependenceDay: String = "",
-    var countryLanguage: String = "",
-    var countryCurrency: String = "",
-    var countryLandArea: String = ""
+    val countryId: Int = 0,
+    val countryName: String = "",
+    val countryInternationalName: String = "",
+    val countryFlagUrl: String = "",
+    val countryDescription: String = "",
+    val countryHeadGovernment: String = "",
+    val countryCapital: String = "",
+    val countryIndependenceDay: String = "",
+    val countryLanguage: String = "",
+    val countryCurrency: String = "",
+    val countryLandArea: String = ""
 )

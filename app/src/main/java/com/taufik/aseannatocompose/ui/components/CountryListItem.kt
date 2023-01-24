@@ -2,7 +2,6 @@ package com.taufik.aseannatocompose.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.MaterialTheme
@@ -23,8 +22,6 @@ import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
 @Composable
 fun CountryListItem(
-    modifier: Modifier = Modifier,
-    countryId: Int,
     countryName: String,
     countryInternationalName: String,
     countryFlagUrl: String,
@@ -35,14 +32,12 @@ fun CountryListItem(
     countryLanguage: String,
     countryCurrency: String,
     countryLandArea: String,
+    modifier: Modifier = Modifier,
     isShow: Boolean = true,
-    navigateToDetail: (Int) -> Unit
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = modifier.clickable {
-            navigateToDetail(countryId)
-        }
+        modifier = modifier
     ) {
         AsyncImage(
             model = countryFlagUrl,
@@ -124,7 +119,6 @@ fun CountryListItem(
 fun AseanNatoAppPreview() {
     AseanNatoComposeTheme {
         CountryListItem(
-            countryId = 0,
             countryName = "Indonesia",
             countryInternationalName = "Republik Indonesia",
             countryFlagUrl = "",
@@ -135,7 +129,6 @@ fun AseanNatoAppPreview() {
             countryLanguage = "",
             countryCurrency = "",
             countryLandArea = "",
-            navigateToDetail = {}
         )
     }
 }
