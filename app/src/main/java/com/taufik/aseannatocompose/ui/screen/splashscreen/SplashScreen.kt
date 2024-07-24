@@ -29,7 +29,7 @@ fun SplashScreen(
         targetValue = if (startAnimation) 1f else 0f,
         animationSpec = tween(
             durationMillis = 3000
-        )
+        ), label = ""
     )
 
     LaunchedEffect(key1 = true) {
