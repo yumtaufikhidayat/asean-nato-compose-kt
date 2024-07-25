@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.taufik.aseannatocompose.ui.AseanNatoApp
 import com.taufik.aseannatocompose.ui.theme.AseanNatoComposeTheme
 
@@ -25,4 +27,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun ShowApp(modifier: Modifier = Modifier) {
+    AseanNatoApp()
 }
