@@ -54,10 +54,10 @@ dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
 
 //    UI
-    implementation("androidx.activity:activity-compose:1.9.0")
-    implementation("androidx.compose.ui:ui:1.6.8")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.6.8")
-    implementation("androidx.compose.material:material:1.6.8")
+    implementation("androidx.activity:activity-compose:1.10.0")
+    implementation("androidx.compose.ui:ui:1.7.7")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.7.7")
+    implementation("androidx.compose.material:material:1.7.7")
 
 //    Test
     testImplementation("junit:junit:4.13.2")
